@@ -1,0 +1,97 @@
+void setup() {
+  println("Demonstration of primitive data type boundaries in Java:");
+
+  // byte: 8-bit signed integer (-128 to 127)
+  byte b = Byte.MAX_VALUE;
+  println("Max byte: " + b);
+  b++;  // Overflow, will wrap around to minimum value
+  println("Max byte + 1 (overflow): " + b);
+
+  b = Byte.MIN_VALUE;
+  println("Min byte: " + b);
+  b--;  // Underflow, will wrap around to maximum value
+  println("Min byte - 1 (underflow): " + b);
+
+  println();
+
+  // short: 16-bit signed integer (-32768 to 32767)
+  short s = Short.MAX_VALUE;
+  println("Max short: " + s);
+  s++;
+  println("Max short + 1 (overflow): " + s);
+
+  s = Short.MIN_VALUE;
+  println("Min short: " + s);
+  s--;
+  println("Min short - 1 (underflow): " + s);
+
+  println();
+
+  // int: 32-bit signed integer (-2147483648 to 2147483647)
+  int i = Integer.MAX_VALUE;
+  println("Max int: " + i);
+  i++;
+  println("Max int + 1 (overflow): " + i);
+
+  i = Integer.MIN_VALUE;
+  println("Min int: " + i);
+  i--;
+  println("Min int - 1 (underflow): " + i);
+
+  println();
+
+  // long: 64-bit signed integer (-9223372036854775808 to 9223372036854775807)
+  long l = Long.MAX_VALUE;
+  println("Max long: " + l);
+  l++;
+  println("Max long + 1 (overflow): " + l);
+
+  l = Long.MIN_VALUE;
+  println("Min long: " + l);
+  l--;
+  println("Min long - 1 (underflow): " + l);
+
+  println();
+
+  // float: 32-bit floating point
+  float f = Float.MAX_VALUE;
+  println("Max float: " + f);
+  f *= 2;  // Overflow will result in "Infinity"
+  println("Max float * 2 (overflow): " + f);
+
+  f = Float.MIN_VALUE;
+  println("Min float: " + f);
+  f /= 2;  // Underflow will result in 0
+  println("Min float / 2 (underflow): " + f);
+
+  println();
+
+  // double: 64-bit floating point
+  double d = Double.MAX_VALUE;
+  println("Max double: " + d);
+  d *= 2;  // Overflow will result in "Infinity"
+  println("Max double * 2 (overflow): " + d);
+
+  d = Double.MIN_VALUE;
+  println("Min double: " + d);
+  d /= 2;  // Underflow will result in 0
+  println("Min double / 2 (underflow): " + d);
+
+  println();
+
+  // char: 16-bit unsigned character (0 to 65535)
+  char c = Character.MAX_VALUE;
+  println("Max char: " + (int)c);
+  c++;
+  println("Max char + 1 (overflow): " + (int)c);
+
+  c = Character.MIN_VALUE;
+  println("Min char: " + (int)c);
+  c--;
+  println("Min char - 1 (underflow): " + (int)c);
+
+  println();
+
+  // boolean: true or false
+  println("boolean: no underflow or overflow, values are only true or false");
+}
